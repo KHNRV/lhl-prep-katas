@@ -1,6 +1,6 @@
-//that takes in a total amount of a bill and the total cash given to pay that
-//bill. Return a new object that describes the total amount of change for the
-//cashier to give back.
+//Fucntion that takes in a total amount of a bill and the total cash given to
+//pay that bill. Return a new object that describes the total amount of change
+//for the cashier to give back.
 const calculateChange = function(total, cash) {
   
   //Define the change variable that will store the returned value (aka that cash
