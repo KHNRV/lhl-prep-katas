@@ -1,7 +1,6 @@
 //Function thar receives a URL encoded string, and return the a JavaScript
 //object that represents that data.
-const urlDecode = function(text) {
-  
+const urlDecode = function (text) {
   //Define the varibale that will store the returned object
   let objectReturned = {};
 
@@ -12,7 +11,7 @@ const urlDecode = function(text) {
   //Add each key-value pair to the returned object
   for (let i = 0; i < arrayOfKeyValue.length; i++) {
     arrayOfKeyValue[i] = arrayOfKeyValue[i].split("=");
-    objectReturned[arrayOfKeyValue[i][0]] = arrayOfKeyValue[i][1].toString()
+    objectReturned[arrayOfKeyValue[i][0]] = arrayOfKeyValue[i][1].toString();
   }
 
   //Return the object

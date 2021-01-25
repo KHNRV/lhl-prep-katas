@@ -2,7 +2,7 @@
 // return that string with all of the whitespace characters converted to %20. If
 // there is whitespace on the outside of the string, like in our second example
 // above, you should only replace the whitespace within the string.
-const urlEncode = function(text) {
+const urlEncode = function (text) {
   //Define variable that will store the URL encoded string
   let urlEncodedString = "";
 
@@ -14,13 +14,13 @@ const urlEncode = function(text) {
       case " ":
         urlEncodedString += "%20";
         break;
-      
+
       default:
         urlEncodedString += character;
     }
   }
   //return the URL encoded string
-  return urlEncodedString
+  return urlEncodedString;
 };
 
 //Print examples to the console

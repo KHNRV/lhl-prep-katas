@@ -1,7 +1,7 @@
 //Define a function that will be given an array of numbers and a condition, in
 //this case odd or even. Given this condition, add up only the values which
 //match that condition. If no values match the condition, return 0.
-const conditionalSum = function(array, condition) {
+const conditionalSum = function (array, condition) {
   //Define a sum variable that will store the sum of the numbers
   let sum = 0;
   //Switch statment that evaluate if the 'odd' or 'even' scenario should run. A
@@ -13,7 +13,7 @@ const conditionalSum = function(array, condition) {
           sum += number;
         }
       }
-      return sum
+      return sum;
       break;
 
     case "odd":
@@ -22,7 +22,7 @@ const conditionalSum = function(array, condition) {
           sum += number;
         }
       }
-      return sum
+      return sum;
       break;
 
     default:

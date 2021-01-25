@@ -1,6 +1,6 @@
 //Function that takes in a date string with the format YYYY/MM/DD, and returns a
 //new human readable date that looks like December 2nd, 2017.
-const talkingCalendar = function(date) {
+const talkingCalendar = function (date) {
   //Split the date and assign each value to the proper year, month or day
   //variable as an integer
   const dateArray = date.split("/");
@@ -51,11 +51,11 @@ const talkingCalendar = function(date) {
       talkMonth = "December";
       break;
     default:
-      return "ERROR: Month number incorrect. Please follow YYYY/MM/DD format"
+      return "ERROR: Month number incorrect. Please follow YYYY/MM/DD format";
   }
 
   //Assign the proper talked day
-  if(day >= 1 && day <= 31) {
+  if (day >= 1 && day <= 31) {
     switch (day) {
       case 1:
         talkDay = day.toString() + "st";
@@ -69,12 +69,12 @@ const talkingCalendar = function(date) {
       default:
         talkDay = day.toString() + "th";
     }
-   } else {
-     return "ERROR: Day number incorrect. Please follow YYYY/MM/DD format"
-   }
+  } else {
+    return "ERROR: Day number incorrect. Please follow YYYY/MM/DD format";
+  }
 
-   //Return the talked date
-    return `${talkMonth} ${talkDay}, ${year}`;
+  //Return the talked date
+  return `${talkMonth} ${talkDay}, ${year}`;
 };
 
 //Test the code
