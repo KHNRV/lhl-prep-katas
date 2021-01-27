@@ -11,7 +11,7 @@ let prompt = require("prompt-sync")();
 function numberGuesser(maxNumber) {
   //Generate the number to guess
   const numberToGuess = Math.ceil(Math.random() * maxNumber);
-  
+
   //Variable to track if a number already been provided
   const historyOfAnswers = [];
 
@@ -30,10 +30,10 @@ function numberGuesser(maxNumber) {
     if (answer === "quit") {
       return "Goodbye";
     }
-    
+
     //Verify if the answer is a number
     if (isNaN(answer)) {
-      console.log("Not a number! Try again!")
+      console.log("Not a number! Try again!");
       continue;
     }
 
@@ -43,11 +43,11 @@ function numberGuesser(maxNumber) {
       continue;
     }
 
-    //Evaluate if the guess is to low or two high
+    //Evaluate if the guess is too low or too high
     if (answer < numberToGuess) {
       console.log("Too Low!");
     } else if (answer > numberToGuess) {
-      console.log("Too High!")
+      console.log("Too High!");
     }
 
     //Only the guess is a number that have not been given before:
@@ -59,7 +59,6 @@ function numberGuesser(maxNumber) {
 
   //Return the victory message with the number of attempts
   return `You got it! You took ${numberOfAttempts} attempts!`;
-
 }
 
 //Create a varaible to store the hisghest random number for the game
@@ -67,10 +66,12 @@ let maxNumber;
 
 //Ask for a maxNumber as long as a valid number as not been given
 do {
-  maxNumber = Number(prompt("What is the highest number you want to be able to find: "));
+  maxNumber = Number(
+    prompt("What is the highest number you want to be able to find: ")
+  );
 } while (isNaN(maxNumber));
 
 //Display the game
-console.log(numberGuesser(maxNumber))
+console.log(numberGuesser(maxNumber));
 // let answer = prompt("Guess a number: ");
 // console.log("You answered: " + answer);
